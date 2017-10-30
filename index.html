@@ -3,129 +3,304 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="http://dudetruck.s3-website-us-west-1.amazonaws.com/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://s3-us-west-1.amazonaws.com/dudetruck/favicon.ico" type="image/x-icon">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <title>DudeTruck</title>
     <meta name="description" content="DudeTruck leads you to a food truck">
+	
 </head>
 
 <style>
+	body {
+		background-image: url("http://dudetruck.s3-website-us-west-1.amazonaws.com/media/body-background.jpg");
+		background-repeat: repeat;
+		margin: 180px 0 100px 0;
+	}
+	.mainContainer {
+		width: 700px;
+		margin: 0 auto;
+		background-color: #fff;
+		box-shadow: 0 5px 20px #000;
+	}
+	.header {
+		height: 285px;
+		background: #fff url("./media/primary-header-background.gif") no-repeat;
+		background-size: contain;
+		overflow: hidden;
+		object-fit: container;
+	}
+	#logoContainer {
+		height: 125px;
+		width: 250px;
+		margin: -130px 0 0 221px;
+		overflow: visible;
+		position: absolute;
+		display: block;
+	}
+	#titleContainer {
+		margin: 0 auto 30px auto;
+		display: block;
+	}
 	.table {
-		width: 650px;
 		margin: 0 auto;
 	}
 	h1, h2, h3, h4, h5, h6 {
+		display: block;
+		overflow: hidden;
 		text-align: center;
 	}
 	#title {
 		font-weight: bold;
 		font-size: 42px;
 		margin: 0 auto;
-		padding: 20px 0 0 0;
+		padding: 140px 0 0 0;
 	}
 	#subtitle {
 		margin: 0 auto;
 		padding: 0;
 	}
 	.tableContainer {
-		padding: 10px 0;
+		padding: 10px 20px;
+	}
+	.tableContainer:last-of-type {
+		padding: 10px 20px 50px;
+	}
+	#footer {
+		text-align: center;
+		margin: 40px auto 0 auto;
+	}
+	.legal {
+		color: #5b5955;
+		font-family: futura-pt, Futura, "Helvetica Neue", Helvertica, Arial, sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 12px;
+	}
+	nav.primary {
+		height: 145px;
+		padding: 0 50px;
+		background: #1a1a1a url("media/body-background.jpg") 0 0;
+		overflow: hidden;
+		border-top: 4px solid black;
+		border-bottom: 4px solid black;
+	}
+	.links {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		float: left;
+		width: 33%;
+		text-align: center;
+		height: 135px;
+	}
+	.link a {
+		text-decoration: none;
+	}
+	a:hover {
+		cursor: pointer;
+	}
+	nav.primary span.title {
+		display: block;
+		margin: 10px auto 0 auto;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 2px;
+		line-height: 1.5;
+	}
+	.glyphicon {
+		font-size: 40px;
+		color: #5b5955;
+		margin: 30px auto 0;
+		transition: color 0.1s ease;
+	}
+	.glyphicon:hover {
+		color: #fff;
+		cursor: pointer;
 	}
 </style>
 
 <body>
-	<h1 id="title">DUDETRUCK</h1>
-	<h3 id="subtitle">Leads you to a foodtruck</h3>
-	<div class="tableContainer">
-		<h2 class="tableHeader">Group Roster</h2>            
-		<table id ="roster" class="table table-hover table-responsive">
-			<thead>
-			  <tr>
-				<th>Name</th>
-				<th>Email</th>
-				<th>ID</th>
-				<th>Role</th>
-			  </tr>
-			</thead>
-			<tbody>
-			  <tr>
-				<td>Aaron Hartigan</td>
-				<td>hartiganaaron@gmail.com</td>
-				<td>219247094</td>
-				<td></td>
-			  </tr>
-			  <tr>
-				<td>Matthew Nix</td>
-				<td>mtnix88@gmail.com</td>
-				<td>217474596</td>
-				<td>PM</td>
-			  </tr>
-			  <tr>
-				<td>Thomas Hoang</td>
-				<td>thomashoang@csus.edu</td>
-				<td>219484409</td>
-				<td></td>
-			  </tr>
-			  <tr>
-				<td>Alexandru Seremet</td>
-				<td>seremet_alex@yahoo.com</td>
-				<td>219247393</td>
-				<td></td>
-			  </tr>
-			  <tr>
-				<td>Christel Garcia</td>
-				<td>christelgarcia@csus.edu</td>
-				<td>219563358</td>
-				<td></td>
-			  </tr>
-			  <tr>
-				<td>Lincoln Gallegos</td>
-				<td>lincolngallegos@csus.edu</td>
-				<td>215590766</td>
-				<td></td>
-			  </tr>
-			  <tr>
-				<td>John Veit</td>
-				<td>john.veit@sbcglobal.net</td>
-				<td>218751027</td>
-				<td></td>
-			  </tr>
-			</tbody>
-		</table>
+	<div class="mainContainer">
+		<div class="header">
+			<div id="logoContainer">
+				<img src="media/logo.jpg" id="logo" width="258" height="258" />
+			</div>
+			<div id="titleContainer">
+				<h1 id="title">DUDETRUCK</h1>
+				<h3 id="subtitle">Leads you to a foodtruck</h3>
+			</div>
+		</div>
+		<nav class="primary">
+			<ul class="links">
+				<li class="link links">
+					<a title="Links" onclick="myscrollTo('links')">
+						<span class="glyphicon glyphicon-list-alt"></span>
+						<span class="title">Links</span>
+					</a>
+				</li>
+				<li class="link roster">
+					<a title="Roster" onclick="myscrollTo('roster')">
+						<span class="glyphicon glyphicon-user"></span>
+						<span class="title">Roster</span>
+					</a>
+				</li>
+				<li class="link files">
+					<a title="Files" onclick="myscrollTo('files')">
+						<span class="glyphicon glyphicon-folder-open"></span>
+						<span class="title">Files</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="links" name="links" class="tableContainer">
+			<h2 class="tableHeader">Important Links</h2>            
+			<table class="table table-hover">
+				<tbody>
+				  <tr>
+					<td><a href="https://github.com/AaronHartigan/DudeTruck">Code Repository</a></td>
+				  </tr>
+				  <tr>
+					<td><a href="https://trello.com/b/TH004EHd/dudetruck">Bug Tracker (Trello)</a></td>
+				  </tr>
+				  <tr>
+					<td><a href="http://dudetruck-env.ays9rzzt3c.us-west-1.elasticbeanstalk.com/">Live Website</a></td>
+				  </tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="roster" name="roster" class="tableContainer">
+			<h2 class="tableHeader">Group Roster</h2>            
+			<table class="table table-hover">
+				<thead>
+				  <tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>ID</th>
+					<th>Role</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>Aaron Hartigan</td>
+					<td>hartiganaaron@gmail.com</td>
+					<td>219247094</td>
+					<td>Dev</td>
+				  </tr>
+				  <tr>
+					<td>Matthew Nix</td>
+					<td>mtnix88@gmail.com</td>
+					<td>217474596</td>
+					<td>PM, UI</td>
+				  </tr>
+				  <tr>
+					<td>Thomas Hoang</td>
+					<td>thomashoang@csus.edu</td>
+					<td>219484409</td>
+					<td>Backend</td>
+				  </tr>
+				  <tr>
+					<td>Alexandru Seremet</td>
+					<td>seremet_alex@yahoo.com</td>
+					<td>219247393</td>
+					<td>Dev</td>
+				  </tr>
+				  <tr>
+					<td>Christel Garcia</td>
+					<td>christelgarcia@csus.edu</td>
+					<td>219563358</td>
+					<td>Everything</td>
+				  </tr>
+				  <tr>
+					<td>Lincoln Gallegos</td>
+					<td>lincolngallegos@csus.edu</td>
+					<td>215590766</td>
+					<td>Dev</td>
+				  </tr>
+				  <tr>
+					<td>John Veit</td>
+					<td>john.veit@sbcglobal.net</td>
+					<td>218751027</td>
+					<td>Tester</td>
+				  </tr>
+				  <tr>
+					<td>Vahak Gilian</td>
+					<td>vahakgilian@gmail.com</td>
+					<td>215258590</td>
+					<td>UI</td>
+				  </tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="files" name="files" class="tableContainer">
+			<h2 class="tableHeader">Deliverables</h2>            
+			<table class="table table-hover">
+				<thead>
+				  <tr>
+					<th>Filename</th>
+					<th>Description</th>
+					<th>Date</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td><a href="./deliverables/DudeTruck.pptx">DudeTruck.pptx</a></td>
+					<td>in class presentation</td>
+					<td>9/06</td>
+				  </tr>
+				  <tr>
+					<td><a href="./deliverables/weeklymeeting1.docx">weeklymeeting1.docx</a></td>
+					<td>weekly meeting notes</td>
+					<td>9/18</td>
+				  </tr>
+				  <tr>
+					<td><a href="./deliverables/DudeTruck_ProcessDescription.pdf">ProcessDescription.pdf</a></td>
+					<td></td>
+					<td>9/27</td>
+				  </tr>
+				  <tr>
+					<td><a href="./deliverables/DudeTruck_ProductDescription.pdf">ProductDescription.pdf</a></td>
+					<td></td>
+					<td>9/27</td>
+				  </tr>
+				  <tr>
+					<td><a href="./deliverables/DudeTruck_UIDiagrams.pdf">UIDiagrams.pdf</a></td>
+					<td></td>
+					<td>9/27</td>
+				  </tr>
+				  <tr>
+					<td><a href="./deliverables/DudeTruck_UseCases.pdf">UseCases.pdf</a></td>
+					<td></td>
+					<td>9/27</td>
+				  </tr>
+				  <tr>
+					<td><a href="./deliverables/DudeTruck_DesignDocument.pdf">DesignDocument.pdf</a></td>
+					<td>contains the system architecture design</td>
+					<td>10/10</td>
+				  </tr>
+				  <tr>
+					<td><a href="./deliverables/DudeTruck_DesignSlides.pdf">DesignSlides.pdf</a></td>
+					<td>in class system architecture slides</td>
+					<td>10/10</td>
+				  </tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
-	<div class="tableContainer">
-		<h2 class="tableHeader">Deliverables</h2>            
-		<table id ="files" class="table table-hover">
-			<thead>
-			  <tr>
-				<th>Filename</th>
-				<th>Description</th>
-				<th>Date</th>
-			  </tr>
-			</thead>
-			<tbody>
-			  <tr>
-				<td><a href="./deliverables/DudeTruck.pptx">DudeTruck.pptx</a></td>
-				<td>In class presentation</td>
-				<td>9/06</td>
-			  </tr>
-			</tbody>
-		</table>
+	<div id="footer">
+		<span class="legal">© Copyright 2017 - 2018 DudeTruck Inc.</span>
 	</div>
-	<div class="tableContainer">
-		<h2 class="tableHeader">Important Links</h2>            
-		<table id ="files" class="table table-hover">
-			<tbody>
-			  <tr>
-				<td><a href="https://github.com/AaronHartigan/DudeTruck">Code Repository</a></td>
-			  </tr>
-			  <tr>
-				<td><a href="">Bug Tracker (doesn't exist yet)</a></td>
-			  </tr>
-			</tbody>
-		</table>
-	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script>
+		function myscrollTo(id) {
+			document.getElementById(id).scrollIntoView();
+		}
+	</script>
 </body>
-
 </html>
